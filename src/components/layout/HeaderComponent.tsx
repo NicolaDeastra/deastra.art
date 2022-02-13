@@ -1,48 +1,27 @@
+import { Button, Container, Box, Heading, Flex } from "@chakra-ui/react";
+import * as React from "react";
 import { useColorMode } from "@chakra-ui/color-mode";
-import { Box, Flex, Text } from "@chakra-ui/layout";
-import { Button } from "@chakra-ui/react";
-import React from "react";
-import { FaGithub } from "react-icons/fa";
-
-import { useDesktopWidthCheck } from "functions/helpers/desktopWidthChecker";
-
-import DarkModeSwitch from "./DarkModeSwitch";
+import { GradientLine } from "components/Common/GradientLine";
+import Logo from "components/Common/Logo";
 
 const HeaderComponent = () => {
-  const { colorMode } = useColorMode();
-  const isDesktopWidth = useDesktopWidthCheck();
   return (
-    <Box
-      justifyContent="start"
-      bg={colorMode === "light" ? "white" : "gray.700"}
-      position="fixed"
-      width="100%"
-      opacity="0.95"
+    <Flex
+      as="header"
       top={0}
-      zIndex={5}
-      transition="0.3s ease-out"
+      css={{ backdropFilter: "saturate(180%) blur(20px)" }}
+      w="full"
+      direction="column"
+      position="fixed"
+      borderBottom={"1px"}
+      borderBottomColor={"gray.200"}
     >
-      <Flex
-        justifyContent="space-between"
-        py={2}
-        align="center"
-        maxW="48rem"
-        mx="auto"
-        px={isDesktopWidth ? 1 : 3}
-      >
-        <Text as="a" href="/" fontSize="lg">
-          <b>yehez-nextjs-chakra-starter</b>
-        </Text>
+      <GradientLine />
 
-        <Flex gridGap={3} align="center">
-          <Button leftIcon={<FaGithub />} variant="ghost" size="sm">
-            Open in Github
-          </Button>
-
-          <DarkModeSwitch />
-        </Flex>
-      </Flex>
-    </Box>
+      <Container color="white" py="2">
+        <Logo />
+      </Container>
+    </Flex>
   );
 };
 

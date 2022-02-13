@@ -1,7 +1,7 @@
 /** @type {import('next-seo').DefaultSeoProps} */
 const defaultSEOConfig = {
-  title: "yehez-nextchakra-starter",
-  titleTemplate: "%s | yehez-nextchakra-starter",
+  title: "melangkah",
+  titleTemplate: "%s - melangkah",
   defaultTitle: "yehez-nextchakra-starter",
   description:
     "Yehezkiel Gunawan's personalized Next.js + chakra-ui + TypeScript starter template",

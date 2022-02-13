@@ -1,15 +1,15 @@
-import { Text, Link as ChakraLink } from "@chakra-ui/react";
+import { Text, Link as ChakraLink, Container } from "@chakra-ui/react";
 import React from "react";
 
+import { GradientLine } from "components/Common/GradientLine";
 import Footer from "components/wrapper/Footer";
 
 const FooterComponent = () => (
   <Footer>
-    <Text>
-      <ChakraLink isExternal href="https://yehezgun.com">
-        <b>{new Date().getFullYear()} | Yehezkiel Gunawan</b>
-      </ChakraLink>
-    </Text>
+    <Container mx="auto">
+      <Text>HHH</Text>
+    </Container>
+    <GradientLine />
   </Footer>
 );
 
